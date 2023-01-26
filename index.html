@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <h1>
+                    <img class="logo" src="imagenes/logo.png" alt="Logo de alura">
+                    <img class="burro" src="imagenes/burro.png" alt="Burro">
+                </h1>
+            </div>
+        </header>
+        <main>
+            <section class="seccion-entrada">
+                <textarea class="input-mensaje" cols="40" rows="10"
+                    placeholder="Ingrese el texto que desea encriptar aqui"></textarea>
+                <div>
+                    <p class="informacion">&#9888;Solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="botones">
+                    <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                    <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+            </section>
+
+            <aside class="seccion-salida">
+                <textarea id="myInput" class="output-mensaje" cols="30" rows="15" placeholder="Esperando mensaje..."></textarea>
+                <img class="img-esperando" src="imagenes/pe.png" alt="Imagen esperando mensaje">
+                <p class="sin-texto"></p>
+                <div class="copiar">
+                    <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <p class="copyright">&copy Diseño realizado por DArt</p>
+            <div>
+                <h1><img class="caja" src="imagenes/gato.jpg" alt="Fondo"></h1>
+            </div>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
